@@ -15,6 +15,6 @@ public class CharacterResponse {
     @SerializedName("info")
     public Info additionalInfo;
 
-    @SerializedName("result")
+    @SerializedName("results")
     public List<Character> characterResults;
 }
