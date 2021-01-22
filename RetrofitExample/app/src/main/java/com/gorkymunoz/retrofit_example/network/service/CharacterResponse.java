@@ -13,8 +13,16 @@ import java.util.List;
 public class CharacterResponse {
 
     @SerializedName("info")
-    public Info additionalInfo;
+    private Info additionalInfo;
 
     @SerializedName("results")
-    public List<Character> characterResults;
+    private List<Character> characterResults;
+
+    public Info getAdditionalInfo() {
+        return additionalInfo;
+    }
+
+    public List<Character> getCharacters() {
+        return characterResults;
+    }
 }

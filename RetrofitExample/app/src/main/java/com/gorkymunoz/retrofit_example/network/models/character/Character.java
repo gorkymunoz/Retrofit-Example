@@ -35,6 +35,53 @@ public class Character {
     @SerializedName("created")
     private String created;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public String getSpecies() {
+        return species;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public ExtraInfo getOriginInfo() {
+        return originInfo;
+    }
+
+    public ExtraInfo getLocationInfo() {
+        return locationInfo;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public List<String> getEpisode() {
+        return episode;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public String getCreated() {
+        return created;
+    }
 }
 
 
