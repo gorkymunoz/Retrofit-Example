@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Retrofit-Example</string>
+    <plurals name="total_episodes">
+        <item quantity="one">Has appeared in %d episode</item>
+        <item quantity="other">Has appeared in %d episodes</item>
+    </plurals>
 </resources>

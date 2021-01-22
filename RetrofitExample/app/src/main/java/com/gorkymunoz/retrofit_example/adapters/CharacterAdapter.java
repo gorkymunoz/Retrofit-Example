@@ -15,7 +15,6 @@ import com.bumptech.glide.Glide;
 import com.gorkymunoz.retrofit_example.R;
 import com.gorkymunoz.retrofit_example.network.models.character.Character;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
