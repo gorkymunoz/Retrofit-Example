@@ -1,4 +1,4 @@
-package com.gorkymunoz.retrofitexamplekotlin
+package com.gorkymunoz.app_kotlin
 
 import org.junit.Test
 

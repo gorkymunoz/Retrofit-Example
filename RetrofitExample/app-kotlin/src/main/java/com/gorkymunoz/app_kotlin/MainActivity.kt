@@ -1,4 +1,4 @@
-package com.gorkymunoz.retrofitexamplekotlin
+package com.gorkymunoz.app_kotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
