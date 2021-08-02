@@ -2,6 +2,7 @@ package com.gorkymunoz.app_kotlin.network.model.character
 
 import com.gorkymunoz.app_kotlin.network.model.ExtraInfo
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 
 /**
@@ -9,6 +10,7 @@ import com.squareup.moshi.Json
  *
  *
  */
+@JsonClass(generateAdapter = true)
 data class Character(
     val id: Int,
     val name: String,

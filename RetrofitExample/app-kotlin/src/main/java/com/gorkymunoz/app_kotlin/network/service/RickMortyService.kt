@@ -1,4 +1,4 @@
-package com.gorkymunoz.app_kotlin.network.endpoint
+package com.gorkymunoz.app_kotlin.network.service
 
 import com.gorkymunoz.app_kotlin.network.model.character.Character
 import com.gorkymunoz.app_kotlin.network.model.character.CharacterList
