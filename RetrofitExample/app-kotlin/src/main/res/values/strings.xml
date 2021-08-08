@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">RetrofitExampleKotlin</string>
+    <string name="character_description">Character picture</string>
+
+    <string name="placeholder_episode_count">Seen in %d episodes</string>
+</resources>
