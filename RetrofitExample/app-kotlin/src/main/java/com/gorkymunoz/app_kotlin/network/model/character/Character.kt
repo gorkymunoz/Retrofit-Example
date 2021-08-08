@@ -20,8 +20,10 @@ data class Character(
     val gender: String,
     val origin: ExtraInfo,
     val location: ExtraInfo,
-    val image: String,
+    @Json(name = "image") val imageUrl: String,
     @Json(name = "episode") val listOfEpisodes: List<String>,
     val url: String,
     val created: String
-)
+) {
+    fun getTotalEpisodes() = listOfEpisodes.size
+}
