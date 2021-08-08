@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.gorkymunoz.app_kotlin.data.usecase.GetAllCharactersUseCase
 import com.gorkymunoz.app_kotlin.network.model.character.CharacterList
-import com.gorkymunoz.app_kotlin.presentation.ResultUI
+import com.gorkymunoz.app_kotlin.presentation.common.ResultUI
 import kotlinx.coroutines.launch
 
 
@@ -25,11 +25,7 @@ class MainViewModel(private val getAllCharactersUseCase: GetAllCharactersUseCase
 
     fun getCharacterList() {
         viewModelScope.launch {
-            val result: ResultUI<CharacterList> = try {
-                ResultUI.Success(getAllCharactersUseCase())
-            } catch (e: Exception) {
-                ResultUI.Error(e)
-            }
+            val result: ResultUI<CharacterList> = getAllCharactersUseCase()
             _characters.value = result
         }
     }

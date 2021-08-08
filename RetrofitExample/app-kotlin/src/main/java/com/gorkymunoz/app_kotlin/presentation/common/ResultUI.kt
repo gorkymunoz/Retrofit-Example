@@ -1,4 +1,4 @@
-package com.gorkymunoz.app_kotlin.presentation
+package com.gorkymunoz.app_kotlin.presentation.common
 
 
 /**
