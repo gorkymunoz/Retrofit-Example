@@ -45,7 +45,14 @@ dependencies {
     // LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
+    // Navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+    //Paging
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version"
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3'
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.moshi:moshi-kotlin:1.12.0'
     implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
@@ -54,7 +61,7 @@ dependencies {
 
     // Annotation processor
     implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    kapt('com.github.bumptech.glide:compiler:4.12.0')
 
     // Test
     testImplementation 'junit:junit:4.13.2'
