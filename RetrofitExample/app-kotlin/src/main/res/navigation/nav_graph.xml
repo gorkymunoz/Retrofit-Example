@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_character">
+
+    <fragment
+        android:id="@+id/nav_character"
+        android:name="com.gorkymunoz.app_kotlin.presentation.ui.character.CharacterFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_episode" />
+    <fragment
+        android:id="@+id/nav_location"
+        android:name="com.gorkymunoz.app_kotlin.LocationFragment"
+        android:label="fragment_character"
+        tools:layout="@layout/fragment_character" />
+    <fragment
+        android:id="@+id/nav_episode"
+        android:name="com.gorkymunoz.app_kotlin.presentation.ui.episode.EpisodeFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" />
+    <fragment
+        android:id="@+id/nav_saved"
+        android:name="com.gorkymunoz.app_kotlin.SavedFragment"
+        android:label="fragment_saved"
+        tools:layout="@layout/fragment_saved" />
+    <fragment
+        android:id="@+id/nav_community"
+        android:name="com.gorkymunoz.app_kotlin.CommunityFragment"
+        android:label="fragment_community"
+        tools:layout="@layout/fragment_community" />
+</navigation>
