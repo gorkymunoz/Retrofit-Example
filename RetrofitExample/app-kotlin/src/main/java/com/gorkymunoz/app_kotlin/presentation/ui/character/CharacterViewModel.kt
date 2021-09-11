@@ -1,9 +1,6 @@
-package com.gorkymunoz.app_kotlin.presentation.main
+package com.gorkymunoz.app_kotlin.presentation.ui.character
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.gorkymunoz.app_kotlin.data.usecase.GetAllCharactersUseCase
 import com.gorkymunoz.app_kotlin.network.model.character.CharacterList
 import com.gorkymunoz.app_kotlin.presentation.common.ResultUI
@@ -15,7 +12,8 @@ import kotlinx.coroutines.launch
  *
  *
  */
-class MainViewModel(private val getAllCharactersUseCase: GetAllCharactersUseCase) : ViewModel() {
+class CharacterViewModel(private val getAllCharactersUseCase: GetAllCharactersUseCase) :
+    ViewModel() {
 
     private val _characters = MutableLiveData<ResultUI<CharacterList>>()
     val characters: LiveData<ResultUI<CharacterList>>
@@ -28,5 +26,15 @@ class MainViewModel(private val getAllCharactersUseCase: GetAllCharactersUseCase
             val result: ResultUI<CharacterList> = getAllCharactersUseCase()
             _characters.value = result
         }
+    }
+}
+
+class MainViewModelFactory(private val getAllCharactersUseCase: GetAllCharactersUseCase) :
+    ViewModelProvider.Factory {
+    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(CharacterViewModel::class.java)) {
+            return CharacterViewModel(getAllCharactersUseCase) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
     }
 }

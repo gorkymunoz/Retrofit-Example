@@ -17,8 +17,6 @@ import com.gorkymunoz.app_kotlin.network.RetrofitClient
 import com.gorkymunoz.app_kotlin.network.model.character.CharacterList
 import com.gorkymunoz.app_kotlin.presentation.common.ResultUI
 import com.gorkymunoz.app_kotlin.presentation.main.CharacterAdapter
-import com.gorkymunoz.app_kotlin.presentation.main.MainViewModel
-import com.gorkymunoz.app_kotlin.presentation.main.MainViewModelFactory
 
 /**
  * A simple [Fragment] subclass.
@@ -31,7 +29,7 @@ class CharacterFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val characterAdapter by lazy { CharacterAdapter() }
-    private val viewModel: MainViewModel by activityViewModels {
+    private val viewModel: CharacterViewModel by activityViewModels {
         MainViewModelFactory(
             GetAllCharactersUseCase(
                 CharacterRepository(RetrofitClient.createService())
