@@ -3,4 +3,13 @@
     <string name="character_description">Character picture</string>
 
     <string name="placeholder_episode_count">Seen in %d episodes</string>
+    <string name="characters_list">Characters list</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="all_characters">Characters</string>
+    <string name="all_locations">Locations</string>
+    <string name="all_episodes">Episodes</string>
+    <string name="all_saved">Saved</string>
+    <string name="all_community">Community</string>
 </resources>
