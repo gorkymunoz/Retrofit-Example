@@ -1,4 +1,4 @@
-package com.gorkymunoz.app_kotlin.presentation.ui
+package com.gorkymunoz.app_kotlin.presentation.ui.character
 
 import android.os.Bundle
 import android.util.Log

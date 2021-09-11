@@ -1,20 +1,20 @@
-package com.gorkymunoz.app_kotlin.presentation.ui.home
+package com.gorkymunoz.app_kotlin.presentation.ui.episode
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.gorkymunoz.app_kotlin.databinding.FragmentHomeBinding
+import com.gorkymunoz.app_kotlin.databinding.FragmentEpisodeBinding
 
 /**
  * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
+ * Use the [EpisodeFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class HomeFragment : Fragment() {
+class EpisodeFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentEpisodeBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +25,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentEpisodeBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
     }
@@ -43,6 +43,6 @@ class HomeFragment : Fragment() {
          * @return A new instance of fragment HomeFragment.
          */
         @JvmStatic
-        fun newInstance() = HomeFragment()
+        fun newInstance() = EpisodeFragment()
     }
 }
