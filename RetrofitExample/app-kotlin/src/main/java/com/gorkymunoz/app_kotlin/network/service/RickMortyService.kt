@@ -1,7 +1,7 @@
 package com.gorkymunoz.app_kotlin.network.service
 
+import com.gorkymunoz.app_kotlin.network.model.InfoListNetwork
 import com.gorkymunoz.app_kotlin.network.model.character.Character
-import com.gorkymunoz.app_kotlin.network.model.character.CharacterList
 import retrofit2.http.GET
 import retrofit2.http.Path
 
@@ -18,6 +18,11 @@ interface RickMortyService {
     suspend fun getRickMortyCharacterById(@Path("id") id: String): Character
 
     @GET("character")
-    suspend fun getRickMortyCharacters(): CharacterList
+    suspend fun getRickMortyCharacters(): InfoListNetwork<Character>
 
+    @GET("location/{id}")
+    suspend fun getRickMortyLocationsById(@Path("id") id: String): String
+
+    @GET("location")
+    suspend fun getRickMortyLocations(): String
 }

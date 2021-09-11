@@ -14,7 +14,8 @@ import com.gorkymunoz.app_kotlin.data.repositories.CharacterRepository
 import com.gorkymunoz.app_kotlin.data.usecase.GetAllCharactersUseCase
 import com.gorkymunoz.app_kotlin.databinding.FragmentCharacterBinding
 import com.gorkymunoz.app_kotlin.network.RetrofitClient
-import com.gorkymunoz.app_kotlin.network.model.character.CharacterList
+import com.gorkymunoz.app_kotlin.network.model.InfoListNetwork
+import com.gorkymunoz.app_kotlin.network.model.character.Character
 import com.gorkymunoz.app_kotlin.presentation.common.ResultUI
 import com.gorkymunoz.app_kotlin.presentation.main.CharacterAdapter
 
@@ -68,7 +69,7 @@ class CharacterFragment : Fragment() {
         _binding = null
     }
 
-    private fun updateUI(result: ResultUI<CharacterList>) {
+    private fun updateUI(result: ResultUI<InfoListNetwork<Character>>) {
 
         when (result) {
             is ResultUI.Loading -> print("LOADING")
@@ -77,8 +78,8 @@ class CharacterFragment : Fragment() {
         }
     }
 
-    private fun updateCharacters(data: CharacterList) {
-        characterAdapter.submitList(data.listOfCharacters)
+    private fun updateCharacters(data: InfoListNetwork<Character>) {
+        characterAdapter.submitList(data.listOfResults)
     }
 
     companion object {

@@ -2,7 +2,8 @@ package com.gorkymunoz.app_kotlin.presentation.ui.character
 
 import androidx.lifecycle.*
 import com.gorkymunoz.app_kotlin.data.usecase.GetAllCharactersUseCase
-import com.gorkymunoz.app_kotlin.network.model.character.CharacterList
+import com.gorkymunoz.app_kotlin.network.model.InfoListNetwork
+import com.gorkymunoz.app_kotlin.network.model.character.Character
 import com.gorkymunoz.app_kotlin.presentation.common.ResultUI
 import kotlinx.coroutines.launch
 
@@ -15,15 +16,15 @@ import kotlinx.coroutines.launch
 class CharacterViewModel(private val getAllCharactersUseCase: GetAllCharactersUseCase) :
     ViewModel() {
 
-    private val _characters = MutableLiveData<ResultUI<CharacterList>>()
-    val characters: LiveData<ResultUI<CharacterList>>
+    private val _characters = MutableLiveData<ResultUI<InfoListNetwork<Character>>>()
+    val characters: LiveData<ResultUI<InfoListNetwork<Character>>>
         get() {
             return _characters
         }
 
     fun getCharacterList() {
         viewModelScope.launch {
-            val result: ResultUI<CharacterList> = getAllCharactersUseCase()
+            val result: ResultUI<InfoListNetwork<Character>> = getAllCharactersUseCase()
             _characters.value = result
         }
     }

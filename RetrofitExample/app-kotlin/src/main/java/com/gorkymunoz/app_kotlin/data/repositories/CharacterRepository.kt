@@ -1,7 +1,7 @@
 package com.gorkymunoz.app_kotlin.data.repositories
 
+import com.gorkymunoz.app_kotlin.network.model.InfoListNetwork
 import com.gorkymunoz.app_kotlin.network.model.character.Character
-import com.gorkymunoz.app_kotlin.network.model.character.CharacterList
 import com.gorkymunoz.app_kotlin.network.service.RickMortyService
 
 
@@ -16,7 +16,7 @@ class CharacterRepository(private val service: RickMortyService) {
         return service.getRickMortyCharacterById(id)
     }
 
-    suspend fun getAll(): CharacterList {
+    suspend fun getAll(): InfoListNetwork<Character> {
         return service.getRickMortyCharacters()
     }
 }

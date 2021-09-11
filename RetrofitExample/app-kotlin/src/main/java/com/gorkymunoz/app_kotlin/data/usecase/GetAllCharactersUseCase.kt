@@ -1,7 +1,8 @@
 package com.gorkymunoz.app_kotlin.data.usecase
 
 import com.gorkymunoz.app_kotlin.data.repositories.CharacterRepository
-import com.gorkymunoz.app_kotlin.network.model.character.CharacterList
+import com.gorkymunoz.app_kotlin.network.model.InfoListNetwork
+import com.gorkymunoz.app_kotlin.network.model.character.Character
 import com.gorkymunoz.app_kotlin.presentation.common.ResultUI
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -13,7 +14,7 @@ import kotlinx.coroutines.withContext
  */
 class GetAllCharactersUseCase(private val repository: CharacterRepository) {
 
-    suspend operator fun invoke(): ResultUI<CharacterList> {
+    suspend operator fun invoke(): ResultUI<InfoListNetwork<Character>> {
         return withContext(Dispatchers.IO) {
             try {
                 ResultUI.Success(repository.getAll())
