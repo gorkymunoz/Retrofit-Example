@@ -1,4 +1,4 @@
-package com.gorkymunoz.app_kotlin.network.model.character
+package com.gorkymunoz.app_kotlin.network.model
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -9,9 +9,9 @@ import com.squareup.moshi.JsonClass
  *
  */
 @JsonClass(generateAdapter = true)
-data class CharacterList(
+data class InfoListNetwork<T>(
     @Json(name = "info") val metadata: Metadata,
-    @Json(name = "results") val listOfCharacters: List<Character>,
+    @Json(name = "results") val listOfResults: List<T>,
 )
 
 @JsonClass(generateAdapter = true)
